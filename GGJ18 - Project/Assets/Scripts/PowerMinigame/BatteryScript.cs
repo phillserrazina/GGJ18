@@ -27,7 +27,7 @@ public class BatteryScript : MonoBehaviour {
 		}
 		else
 		{
-			gameObject.GetComponent<Renderer> ().material.color = Color.white;
+			gameObject.GetComponent<Renderer> ().material.color = Color.red;
 
 			this.isPowered = false;
 		}

@@ -19,7 +19,7 @@ public class CameraManager : MonoBehaviour {
 
 	void Start()
 	{
-		offset = new Vector3 (0, 0, -10);
+		offset = new Vector3 (0, 2, -10);
 
 		gameManager = GameObject.FindObjectOfType<GameManager> ();
 		player = GameObject.Find ("Player").GetComponent<PlayerScript> ();

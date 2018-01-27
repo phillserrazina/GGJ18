@@ -18,6 +18,10 @@ public class TransmiterScript : MonoBehaviour {
 	public Text satisfactionText;
 	public Text scoreText;
 
+	public GameObject wave1;
+	public GameObject wave2;
+	public GameObject wave3;
+
 	// FUNCTIONS
 
 	void Start()
@@ -39,6 +43,10 @@ public class TransmiterScript : MonoBehaviour {
 					satisfactionMeter += chargeSpeed * Time.deltaTime * gameManager.powerOffCounter * 4f;
 
 				score += chargeSpeed * Time.deltaTime * gameManager.powerOffCounter;
+
+				wave1.SetActive (true);
+				wave2.SetActive (true);
+				wave3.SetActive (true);
 			}
 			else
 			{
@@ -49,6 +57,10 @@ public class TransmiterScript : MonoBehaviour {
 		{
 			if(satisfactionMeter > 0)
 				satisfactionMeter -= chargeSpeed * 0.5f * Time.deltaTime * gameManager.powerOffCounter;
+
+			wave1.SetActive (false);
+			wave2.SetActive (false);
+			wave3.SetActive (false);
 		}
 	}
 
