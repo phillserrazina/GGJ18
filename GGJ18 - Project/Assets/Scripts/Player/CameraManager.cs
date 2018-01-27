@@ -6,7 +6,8 @@ public class CameraManager : MonoBehaviour {
 
 	// VARIABLES
 
-	public GameObject miniGame;
+	public GameObject powerMiniGame;
+	public GameObject transMiniGame;
 
 	private Vector3 offset;
 
@@ -31,7 +32,7 @@ public class CameraManager : MonoBehaviour {
 
 		else if (gameManager.currentState == GameManager.GameStates.GEARS)
 		{
-			this.transform.position = miniGame.transform.position + offset;
+			this.transform.position = powerMiniGame.transform.position + offset;
 		}
 	}
 }

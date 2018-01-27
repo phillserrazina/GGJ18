@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour {
 	private GearScript gear;
 	private GearManager gearManager;
 	private GameManager gameManager;
+	private TileManager tileManager;
 
 	// FUNCTIONS
 
@@ -26,6 +27,7 @@ public class PlayerScript : MonoBehaviour {
 		// gear = GameObject.FindObjectOfType<GearScript> ();
 		gameManager = GameObject.FindObjectOfType<GameManager> ();
 		gearManager = GameObject.FindObjectOfType<GearManager> ();
+		tileManager = GameObject.FindObjectOfType<TileManager> ();
 	}
 
 
@@ -39,6 +41,11 @@ public class PlayerScript : MonoBehaviour {
 			float horizontalMovement = Input.GetAxisRaw ("Horizontal");
 
 			rb.velocity = new Vector3 (horizontalMovement * speed, 0, 0);
+		}
+
+		if(canMove != true)
+		{
+			rb.velocity = Vector3.zero;
 		}
 
 		// Gear Turning System

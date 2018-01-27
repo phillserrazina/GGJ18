@@ -7,6 +7,8 @@ TagManager:
   - First Gear
   - Last Gear
   - Middle Gear
+  - Tile
+  - Position
   layers:
   - Default
   - TransparentFX

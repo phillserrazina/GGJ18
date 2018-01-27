@@ -8,14 +8,16 @@ public class RadioScript : MonoBehaviour {
 
 	private int powerCounter = 0;
 
-	private bool powerOn = false;
+	public bool powerOn = false;
 
 	private BatteryScript[] batteries;
+	private GameManager gameManager;
 
 	// FUNCTIONS
 	void Start () 
 	{
 		batteries = GameObject.FindObjectsOfType<BatteryScript> ();
+		gameManager = GameObject.FindObjectOfType<GameManager> ();
 	}
 
 	// Update is called once per frame
@@ -44,9 +46,11 @@ public class RadioScript : MonoBehaviour {
 			}
 		}
 
-		if (powerCounter == batteries.Length)
+		if (powerCounter == batteries.Length && powerOn == false)
 		{
 			powerOn = true;
+
+			StartCoroutine (gameManager.PowerOff ());
 
 			GameObject.Find ("PowerLight").GetComponent<Renderer> ().material.color = Color.green;
 		}
