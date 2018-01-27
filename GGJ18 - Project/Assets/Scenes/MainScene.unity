@@ -401,8 +401,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 123127511}
   m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 0, y: -1.2200003, z: 0.017000219}
-  m_LocalScale: {x: 0.050000034, y: 0.9127035, z: 0.3073584}
+  m_LocalPosition: {x: -0.2177, y: -1.2200003, z: 0.017000219}
+  m_LocalScale: {x: 0.050000034, y: 0.4773736, z: 0.3073584}
   m_Children: []
   m_Father: {fileID: 1701763419}
   m_RootOrder: 1
@@ -473,7 +473,7 @@ GameObject:
   - component: {fileID: 162996050}
   - component: {fileID: 162996049}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: InputCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -642,7 +642,7 @@ GameObject:
   - component: {fileID: 635143110}
   m_Layer: 0
   m_Name: GearObject (1)
-  m_TagString: Untagged
+  m_TagString: Middle Gear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -712,6 +712,7 @@ GameObject:
   - component: {fileID: 397595223}
   - component: {fileID: 397595222}
   - component: {fileID: 397595221}
+  - component: {fileID: 397595224}
   m_Layer: 0
   m_Name: Middle Right Battery
   m_TagString: Untagged
@@ -746,7 +747,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 38a9cce42d7f45249aab2c3c5c2298e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -784,6 +785,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 397595219}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &397595224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 397595219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24ddc66ad6f2ef42aea7dbf26c91df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectingGear: {fileID: 1967378080}
 --- !u!1 &447206381
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +896,7 @@ GameObject:
   - component: {fileID: 457067241}
   - component: {fileID: 457067240}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: InputCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1266,6 +1279,7 @@ MonoBehaviour:
   correctRotX: 45
   readyToSnap: 0
   snapped: 0
+  powered: 0
   gearGraphic: {fileID: 1701763418}
 --- !u!1 &651094669
 GameObject:
@@ -1279,7 +1293,7 @@ GameObject:
   - component: {fileID: 651094672}
   - component: {fileID: 651094671}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: InputCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1571,6 +1585,7 @@ MonoBehaviour:
   correctRotX: 90
   readyToSnap: 0
   snapped: 0
+  powered: 0
   gearGraphic: {fileID: 1664860136}
 --- !u!1 &783984554
 GameObject:
@@ -1993,7 +2008,7 @@ GameObject:
   - component: {fileID: 1051757073}
   - component: {fileID: 1051757072}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: InputCube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2358,6 +2373,7 @@ GameObject:
   - component: {fileID: 1238113523}
   - component: {fileID: 1238113522}
   - component: {fileID: 1238113521}
+  - component: {fileID: 1238113524}
   m_Layer: 0
   m_Name: Left Middle Battery
   m_TagString: Untagged
@@ -2392,7 +2408,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 38a9cce42d7f45249aab2c3c5c2298e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2430,6 +2446,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1238113519}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1238113524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1238113519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24ddc66ad6f2ef42aea7dbf26c91df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectingGear: {fileID: 2054450729}
 --- !u!1 &1254089160
 GameObject:
   m_ObjectHideFlags: 0
@@ -2442,7 +2470,7 @@ GameObject:
   - component: {fileID: 1254089162}
   m_Layer: 0
   m_Name: GearObject (4)
-  m_TagString: Last Gear
+  m_TagString: Middle Gear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2478,6 +2506,7 @@ MonoBehaviour:
   correctRotX: 90
   readyToSnap: 0
   snapped: 0
+  powered: 0
   gearGraphic: {fileID: 832052248}
 --- !u!1 &1266002128
 GameObject:
@@ -2491,7 +2520,7 @@ GameObject:
   - component: {fileID: 1967378080}
   m_Layer: 0
   m_Name: GearObject (3)
-  m_TagString: Untagged
+  m_TagString: Middle Gear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2682,7 +2711,7 @@ GameObject:
   - component: {fileID: 2054450729}
   m_Layer: 0
   m_Name: GearObject (2)
-  m_TagString: Untagged
+  m_TagString: Middle Gear
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3037,6 +3066,93 @@ Transform:
   m_Father: {fileID: 1927290459}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1436142038
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1450274702170906, guid: df316e58224ebac4ca08d28889a7d401,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1436142039}
+  - component: {fileID: 1436142042}
+  - component: {fileID: 1436142041}
+  - component: {fileID: 1436142040}
+  m_Layer: 0
+  m_Name: Pointer (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1436142039
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4564419194304910, guid: df316e58224ebac4ca08d28889a7d401,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436142038}
+  m_LocalRotation: {x: 0.27059793, y: 0.65328157, z: 0.65328157, w: -0.27059793}
+  m_LocalPosition: {x: 0.173, y: -1.22, z: 0.193}
+  m_LocalScale: {x: 0.049999997, y: 0.5000001, z: 0.30735835}
+  m_Children: []
+  m_Father: {fileID: 1701763419}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 225}
+--- !u!23 &1436142040
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23179091619936928, guid: df316e58224ebac4ca08d28889a7d401,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436142038}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: f4f0ec9b989620d43879c2353fbda3f2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1436142041
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 65155819656797276, guid: df316e58224ebac4ca08d28889a7d401,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436142038}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1436142042
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33606970626127630, guid: df316e58224ebac4ca08d28889a7d401,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1436142038}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1462801268
 GameObject:
   m_ObjectHideFlags: 0
@@ -3048,6 +3164,7 @@ GameObject:
   - component: {fileID: 1462801272}
   - component: {fileID: 1462801271}
   - component: {fileID: 1462801270}
+  - component: {fileID: 1462801273}
   m_Layer: 0
   m_Name: Left Low Battery
   m_TagString: Untagged
@@ -3082,7 +3199,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 38a9cce42d7f45249aab2c3c5c2298e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3120,6 +3237,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1462801268}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1462801273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1462801268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24ddc66ad6f2ef42aea7dbf26c91df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectingGear: {fileID: 1254089162}
 --- !u!1 &1464913981
 GameObject:
   m_ObjectHideFlags: 0
@@ -3394,7 +3523,7 @@ GameObject:
   - component: {fileID: 1664860139}
   - component: {fileID: 1664860138}
   m_Layer: 0
-  m_Name: Gear3
+  m_Name: Gear6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3592,6 +3721,8 @@ Transform:
   m_Children:
   - {fileID: 732558770}
   - {fileID: 123127512}
+  - {fileID: 1853914481}
+  - {fileID: 1436142039}
   m_Father: {fileID: 1837970622}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
@@ -3768,6 +3899,93 @@ Transform:
   m_Father: {fileID: 635143109}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1853914480
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1450274702170906, guid: df316e58224ebac4ca08d28889a7d401,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1853914481}
+  - component: {fileID: 1853914484}
+  - component: {fileID: 1853914483}
+  - component: {fileID: 1853914482}
+  m_Layer: 0
+  m_Name: Pointer (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1853914481
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 4564419194304910, guid: df316e58224ebac4ca08d28889a7d401,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853914480}
+  m_LocalRotation: {x: -0.13794975, y: 0.69351995, z: 0.69351995, w: 0.13794975}
+  m_LocalPosition: {x: 0.095, y: -1.2171389, z: -0.20800018}
+  m_LocalScale: {x: 0.049999997, y: 0.5000001, z: 0.30735835}
+  m_Children: []
+  m_Father: {fileID: 1701763419}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: -90.00001, y: 0, z: 157.5}
+--- !u!23 &1853914482
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 23179091619936928, guid: df316e58224ebac4ca08d28889a7d401,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853914480}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: f4f0ec9b989620d43879c2353fbda3f2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1853914483
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 65155819656797276, guid: df316e58224ebac4ca08d28889a7d401,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853914480}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1853914484
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 33606970626127630, guid: df316e58224ebac4ca08d28889a7d401,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1853914480}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1854802443
 GameObject:
   m_ObjectHideFlags: 0
@@ -4085,6 +4303,7 @@ MonoBehaviour:
   correctRotX: 225
   readyToSnap: 0
   snapped: 0
+  powered: 0
   gearGraphic: {fileID: 1575584020}
 --- !u!1 &1927290458
 GameObject:
@@ -4147,6 +4366,7 @@ MonoBehaviour:
   correctRotX: 180
   readyToSnap: 0
   snapped: 0
+  powered: 0
   gearGraphic: {fileID: 503475220}
 --- !u!1 &1974887955
 GameObject:
@@ -4159,6 +4379,7 @@ GameObject:
   - component: {fileID: 1974887959}
   - component: {fileID: 1974887958}
   - component: {fileID: 1974887957}
+  - component: {fileID: 1974887960}
   m_Layer: 0
   m_Name: Low Right Battery
   m_TagString: Untagged
@@ -4193,7 +4414,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 38a9cce42d7f45249aab2c3c5c2298e8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4231,6 +4452,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1974887955}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1974887960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1974887955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c24ddc66ad6f2ef42aea7dbf26c91df9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  connectingGear: {fileID: 774828229}
 --- !u!4 &2054450728
 Transform:
   m_ObjectHideFlags: 0
@@ -4262,4 +4495,5 @@ MonoBehaviour:
   correctRotX: 270
   readyToSnap: 0
   snapped: 0
+  powered: 0
   gearGraphic: {fileID: 62552041}

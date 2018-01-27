@@ -6,6 +6,7 @@ TagManager:
   tags:
   - First Gear
   - Last Gear
+  - Middle Gear
   layers:
   - Default
   - TransparentFX

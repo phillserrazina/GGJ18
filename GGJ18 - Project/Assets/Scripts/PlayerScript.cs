@@ -86,48 +86,6 @@ public class PlayerScript : MonoBehaviour {
 					if (isPressing == false) 
 					{
 						gear.gearValues += gearIncrement;
-
-						// Is this the first gear?
-						if (gear.tag == "First Gear") 
-						{
-							// If both gears are ready to snap, snap them
-							if (gear.readyToSnap == true && gearManager.gearArray [gearManager.currentGear + 1].readyToSnap == true) 
-							{
-								gear.snapped = true;
-								gearManager.gearArray [gearManager.currentGear + 1].snapped = true;
-
-								Debug.Log (gear.name + " and " + gearManager.gearArray [gearManager.currentGear + 1].name + " snapped!");
-							}
-						}
-
-						// Is this the last gear?
-						else if (gear.tag == "Last Gear") 
-						{
-							// If both gears are ready to snap, snap them
-							if (gear.readyToSnap == true && gearManager.gearArray [gearManager.currentGear - 1].readyToSnap == true) 
-							{
-								gear.snapped = true;
-								gearManager.gearArray [gearManager.currentGear - 1].snapped = true;
-
-								Debug.Log (gear.name + " and " + gearManager.gearArray [gearManager.currentGear - 1].name + " snapped!");
-							}
-						}
-
-						// Is this one of the middle gears?
-						else
-						{
-							// If all the gears are ready to snap, snap them
-							if (gear.readyToSnap == true && 
-								gearManager.gearArray [gearManager.currentGear + 1].readyToSnap == true && 
-								gearManager.gearArray [gearManager.currentGear - 1].readyToSnap == true) 
-							{
-								gear.snapped = true;
-								gearManager.gearArray [gearManager.currentGear + 1].snapped = true;
-								gearManager.gearArray [gearManager.currentGear - 1].snapped = true;
-
-								Debug.Log (gear.name + " and " + gearManager.gearArray [gearManager.currentGear + 1].name + " snapped!");
-							}
-						}
 					}
 
 					isPressing = true;
@@ -144,48 +102,6 @@ public class PlayerScript : MonoBehaviour {
 					if (isPressing == false) 
 					{
 						gear.gearValues -= gearIncrement;
-
-						// Is this the first gear?
-						if (gear.tag == "First Gear") 
-						{
-							// If both gears are ready to snap, snap them
-							if (gear.readyToSnap == true && gearManager.gearArray [gearManager.currentGear + 1].readyToSnap == true) 
-							{
-								gear.snapped = true;
-								gearManager.gearArray [gearManager.currentGear + 1].snapped = true;
-
-								Debug.Log (gear.name + " and " + gearManager.gearArray [gearManager.currentGear + 1].name + " snapped!");
-							}
-						}
-
-						// Is this the last gear?
-						else if (gear.tag == "Last Gear")  
-						{
-							// If both gears are ready to snap, snap them
-							if (gear.readyToSnap == true && gearManager.gearArray [gearManager.currentGear - 1].readyToSnap == true) 
-							{
-								gear.snapped = true;
-								gearManager.gearArray [gearManager.currentGear - 1].snapped = true;
-
-								Debug.Log (gear.name + " and " + gearManager.gearArray [gearManager.currentGear - 1].name + " snapped!");
-							}
-						}
-
-						// Is this one of the middle gears?
-						else
-						{
-							// If all the gears are ready to snap, snap them
-							if (gear.readyToSnap == true && 
-								gearManager.gearArray [gearManager.currentGear + 1].readyToSnap == true && 
-								gearManager.gearArray [gearManager.currentGear - 1].readyToSnap == true) 
-							{
-								gear.snapped = true;
-								gearManager.gearArray [gearManager.currentGear + 1].snapped = true;
-								gearManager.gearArray [gearManager.currentGear - 1].snapped = true;
-
-								Debug.Log (gear.name + " and " + gearManager.gearArray [gearManager.currentGear + 1].name + " snapped!");
-							}
-						}
 					}
 
 					isPressing = true;
