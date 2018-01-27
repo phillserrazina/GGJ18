@@ -7,6 +7,8 @@ public class BatteryScript : MonoBehaviour {
 	// VARIABLES
 
 	public GearScript connectingGear;
+	public bool isPowered = false;
+	public bool counted = false;
 
 	// FUNCTIONS
 
@@ -20,10 +22,14 @@ public class BatteryScript : MonoBehaviour {
 		if(connectingGear.powered == true)
 		{
 			gameObject.GetComponent<Renderer> ().material.color = Color.yellow;
+
+			this.isPowered = true;
 		}
 		else
 		{
 			gameObject.GetComponent<Renderer> ().material.color = Color.white;
+
+			this.isPowered = false;
 		}
 	}
 }

@@ -77,39 +77,36 @@ public class PlayerScript : MonoBehaviour {
 			}
 
 			// Turn Gear Right
-			if (gear.snapped == false) 
+			if (Input.GetKey (KeyCode.RightArrow)) 
 			{
-				// Check Input
-				if (Input.GetKey (KeyCode.RightArrow)) 
+				// Guarantee that it is only pressed once
+				if (isPressing == false) 
 				{
-					// Guarantee that it is only pressed once
-					if (isPressing == false) 
-					{
-						gear.gearValues += gearIncrement;
-					}
-
-					isPressing = true;
+					gear.gearValues += gearIncrement;
 				}
 
-				if (Input.GetKeyUp (KeyCode.RightArrow)) {
-					isPressing = false;
-				}
+				isPressing = true;
+			}
 
-				// Turn Gear Left
-				if (Input.GetKey (KeyCode.LeftArrow)) 
+			if (Input.GetKeyUp (KeyCode.RightArrow)) {
+				isPressing = false;
+			}
+
+			// Turn Gear Left
+			if (Input.GetKey (KeyCode.LeftArrow)) 
+			{
+				// Guarantee that it is only pressed once
+				if (isPressing == false) 
 				{
-					// Guarantee that it is only pressed once
-					if (isPressing == false) 
-					{
-						gear.gearValues -= gearIncrement;
-					}
-
-					isPressing = true;
+					gear.gearValues -= gearIncrement;
 				}
 
-				if (Input.GetKeyUp (KeyCode.LeftArrow)) {
-					isPressing = false;
-				}
+				isPressing = true;
+			}
+
+			if (Input.GetKeyUp (KeyCode.LeftArrow)) 
+			{
+				isPressing = false;
 			}
 		}	
 	}

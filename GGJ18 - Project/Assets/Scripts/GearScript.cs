@@ -10,10 +10,9 @@ public class GearScript : MonoBehaviour {
 	[Range(0, 359)] public float gearValues = 90.0f;
 
 	[SerializeField] private float correctRotX = 0.0f;
-	private int gearNumber;
+	public int gearNumber;
 
 	public bool readyToSnap = false;
-	public bool snapped = false;
 	public bool powered = false;
 
 	public GameObject gearGraphic;
@@ -58,6 +57,7 @@ public class GearScript : MonoBehaviour {
 			gameObject.GetComponentInChildren<Renderer> ().material.color = Color.white;
 		}
 
+		gearGraphic.transform.rotation = Quaternion.Euler (gearValues, 90.0f, 90.0f);
 
 		if(gearValues >= 360f)
 		{
@@ -66,11 +66,6 @@ public class GearScript : MonoBehaviour {
 		else if (gearValues < 0f)
 		{
 			gearValues = 337.5f;
-		}
-
-		if (snapped == false) 
-		{
-			gearGraphic.transform.rotation = Quaternion.Euler (gearValues, 90.0f, 90.0f);
 		}
 
 		// Check if it is in right position
@@ -148,48 +143,6 @@ public class GearScript : MonoBehaviour {
 				readyToSnap = false;
 
 				powered = false;
-			}
-		}
-
-		// Is this the first gear?
-		if (gameObject.tag == "First Gear") 
-		{
-			// If both gears are ready to snap, snap them
-			if (readyToSnap == true && gearManager.gearArray [1].readyToSnap == true) 
-			{
-				snapped = true;
-				gearManager.gearArray [gearManager.currentGear + 1].snapped = true;
-
-				Debug.Log (gameObject.name + " and " + gearManager.gearArray [gearManager.currentGear + 1].name + " snapped!");
-			}
-		}
-
-		// Is this the last gear?
-		else if (gameObject.tag == "Last Gear") 
-		{
-			// If both gears are ready to snap, snap them
-			if (readyToSnap == true && gearManager.gearArray [gearManager.gearArray.Length - 1].readyToSnap == true) 
-			{
-				snapped = true;
-				gearManager.gearArray [gearManager.currentGear - 1].snapped = true;
-
-				Debug.Log (gameObject.name + " and " + gearManager.gearArray [gearManager.currentGear - 1].name + " snapped!");
-			}
-		}
-
-		// Is this one of the middle gears?
-		else if(gameObject.tag == "Middle Gear")
-		{
-			// If all the gears are ready to snap, snap them
-			if (readyToSnap == true && 
-				gearManager.gearArray [gearNumber + 1].readyToSnap == true && 
-				gearManager.gearArray [gearNumber - 1].readyToSnap == true) 
-			{
-				snapped = true;
-				gearManager.gearArray [gearNumber + 1].snapped = true;
-				gearManager.gearArray [gearNumber - 1].snapped = true;
-
-				Debug.Log (gameObject.name + " and " + gearManager.gearArray [gearManager.currentGear + 1].name + " snapped!");
 			}
 		}
 	}
