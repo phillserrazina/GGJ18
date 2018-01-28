@@ -9,6 +9,7 @@ public class RadioScript : MonoBehaviour {
 	private int powerCounter = 0;
 
 	public bool powerOn = false;
+	public float x;
 
 	private BatteryScript[] batteries;
 	private GameManager gameManager;
@@ -50,15 +51,31 @@ public class RadioScript : MonoBehaviour {
 		{
 			powerOn = true;
 
+			x = Random.value;
+
 			StartCoroutine (gameManager.PowerOff ());
 
 			GameObject.Find ("PowerLight").GetComponent<Renderer> ().material.color = Color.green;
+			GameObject.Find ("PowerLight").GetComponent<Light> ().color = Color.green;
+
+			GameObject.Find ("RoomLight").GetComponent<Light> ().intensity = 5f;
+			GameObject.Find ("RoomLight2").GetComponent<Light> ().intensity = 5f;
+
+			GameObject.Find ("WarningLight").GetComponent<Renderer> ().material.color = Color.green;
+			GameObject.Find ("WarningLight").GetComponent<Light> ().color = Color.green;
 		}
 		else if (powerCounter != batteries.Length)
 		{
 			powerOn = false;
 
 			GameObject.Find ("PowerLight").GetComponent<Renderer> ().material.color = Color.red;
+			GameObject.Find ("PowerLight").GetComponent<Light> ().color = Color.red;
+
+			GameObject.Find ("RoomLight").GetComponent<Light> ().intensity = 0f;
+			GameObject.Find ("RoomLight2").GetComponent<Light> ().intensity = 0f;
+
+			GameObject.Find ("WarningLight").GetComponent<Renderer> ().material.color = Color.red;
+			GameObject.Find ("WarningLight").GetComponent<Light> ().color = Color.red;
 		}
 	}
 }

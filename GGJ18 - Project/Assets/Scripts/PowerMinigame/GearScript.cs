@@ -14,16 +14,20 @@ public class GearScript : MonoBehaviour {
 
 	public bool readyToSnap = false;
 	public bool powered = false;
+	private bool isActive = false;
 
 	public GameObject gearGraphic;
 
 	private GearManager gearManager;
+
+	private AudioManager audioManager;
 
 	// FUNCTIONS
 
 
 	void Start () 
 	{
+		audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager> ();
 		gearManager = GameObject.FindObjectOfType<GearManager> ();
 
 		for(int i = 0; i < gearManager.gearArray.Length; i++)
@@ -47,7 +51,7 @@ public class GearScript : MonoBehaviour {
 
 			if (gameObject.name != gearManager.gearArray [gearManager.currentGear].name) {
 				
-				gameObject.GetComponentInChildren<Renderer> ().material.color = Color.white;
+				gameObject.GetComponentInChildren<Renderer> ().material.color = Color.gray;
 			}
 		}
 
@@ -77,6 +81,12 @@ public class GearScript : MonoBehaviour {
 				readyToSnap = true;
 
 				powered = true;
+
+				if (isActive == false) 
+				{
+					audioManager.Play ("SnapSE");
+					isActive = true;
+				}
 			}
 
 			// Is this the last gear?
@@ -86,6 +96,12 @@ public class GearScript : MonoBehaviour {
 				if (gearManager.gearArray [gearNumber - 1].powered == true) 
 				{
 					powered = true;
+
+					if (isActive == false) 
+					{
+						audioManager.Play ("SnapSE");
+						isActive = true;
+					}
 
 					if (gearManager.gearArray [gearNumber - 1].readyToSnap == true) 
 					{
@@ -105,6 +121,12 @@ public class GearScript : MonoBehaviour {
 				if (gearManager.gearArray [gearNumber - 1].powered == true) 
 				{
 					powered = true;
+
+					if (isActive == false) 
+					{
+						audioManager.Play ("SnapSE");
+						isActive = true;
+					}
 
 					if(gearManager.gearArray [gearNumber + 1].readyToSnap == true && 
 						gearManager.gearArray [gearNumber - 1].readyToSnap == true)
@@ -127,6 +149,11 @@ public class GearScript : MonoBehaviour {
 				readyToSnap = false;
 
 				powered = false;
+
+				if (isActive == true) 
+				{
+					isActive = false;
+				}
 			}
 
 			// Is this the last gear?
@@ -135,6 +162,11 @@ public class GearScript : MonoBehaviour {
 				readyToSnap = false;
 
 				powered = false;
+
+				if (isActive == true) 
+				{
+					isActive = false;
+				}
 			}
 
 			// Is this one of the middle gears?
@@ -143,6 +175,11 @@ public class GearScript : MonoBehaviour {
 				readyToSnap = false;
 
 				powered = false;
+
+				if (isActive == true) 
+				{
+					isActive = false;
+				}
 			}
 		}
 	}

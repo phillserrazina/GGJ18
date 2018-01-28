@@ -9,6 +9,7 @@ TagManager:
   - Middle Gear
   - Tile
   - Position
+  - RoomLight
   layers:
   - Default
   - TransparentFX
@@ -45,4 +46,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: AboveBG
+    uniqueID: 1551276943
     locked: 0

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -35,7 +36,7 @@ public class GameManager : MonoBehaviour {
 	{
 		if(GameObject.FindObjectOfType<TransmiterScript>().satisfactionMeter <= 0)
 		{
-			// Go to Main Menu
+			SceneManager.LoadScene ("LoseScene");
 		}
 
 		switch(currentState)
@@ -56,6 +57,11 @@ public class GameManager : MonoBehaviour {
 			}
 
 			break;
+		}
+
+		if(Input.GetKey(KeyCode.Escape))
+		{
+			SceneManager.LoadScene ("MenuScene");
 		}
 	}
 

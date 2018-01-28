@@ -1,0 +1,55 @@
+Initialize engine version: 2017.1.0f3 (472613c02cf7)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 920M (ID=0x1299)
+    Vendor:   NVIDIA
+    VRAM:     2020 MB
+    Driver:   21.21.13.6909
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\UnityEngine.Timeline.dll (this message is harmless)
+Loading C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\UnityEngine.Timeline.dll into Unity Child Domain
+Platform assembly: C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\Carolina\Desktop\Phill\Unity\Projects\GGJ18\GGJ18 - Project\Builds\RadioKeeper_Data\Managed\System.Core.dll (this message is harmless)
+- Completed reload, in  0.026 seconds
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 0.802439 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1f80 -> priority: 1 
+  Thread -> id: 133c -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+Shader 'Galactic Sudios/Ultra Emissive Particles': fallback shader 'ParticleAdditive' not found
+UnloadTime: 5.604686 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 1190.
+Total: 0.382419 ms (FindLiveObjects: 0.094429 ms CreateObjectMapping: 0.018373 ms MarkObjects: 0.239279 ms  DeleteObjects: 0.029055 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.145548 ms
+
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 340.
+Total: 0.422156 ms (FindLiveObjects: 0.044010 ms CreateObjectMapping: 0.018373 ms MarkObjects: 0.172622 ms  DeleteObjects: 0.177750 ms)
+
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0)
+Shader 'Galactic Sudios/Ultra Emissive Particles': fallback shader 'ParticleAdditive' not found
+UnloadTime: 0.440957 ms
+
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 1190.
+Total: 0.349945 ms (FindLiveObjects: 0.094429 ms CreateObjectMapping: 0.018373 ms MarkObjects: 0.212360 ms  DeleteObjects: 0.024355 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.703309 ms
+
+Unloading 72 unused Assets to reduce memory usage. Loaded Objects now: 340.
+Total: 0.420447 ms (FindLiveObjects: 0.034182 ms CreateObjectMapping: 0.014100 ms MarkObjects: 0.200396 ms  DeleteObjects: 0.170913 ms)
+
